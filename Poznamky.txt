@@ -1,0 +1,124 @@
+// instalacia typescrriptu
+npm install -g typescript
+
+// zistenie verzie
+tsc  --version
+
+
+// vytvorenie priecinka
+mkdir ts-hello
+ cd ts-hello\
+
+// otvorilo nam subor vo visual studio code (ani som ho nevytvaral)
+code main.ts
+
+// kompiloval som .ts do klasickeho js
+tsc main.ts
+
+	: function log(message) {
+    	:	console.log(message);
+	: }
+	:
+	: var message = 'hello';
+	: log(message);
+
+
+//videl som zmenu ze sa to skompilovalo do js
+code main.js
+
+// vypisal som si vysledok
+node main.js
+
+	>> hello
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
