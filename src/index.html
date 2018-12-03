@@ -11,6 +11,30 @@
 <body>
   <app-root></app-root>
 
+<!-- 
+
+    *** create components ***
+
+        ng generate component hero-detail
+        
+    *** obojsmerná syntax ***
+        
+        [(ngModel)] je obojsmerná syntax údajov Angular.
+
+    *** USE *ngFor - REPEAT DIRECTIVE - TO GET DATA FROM OBJECT (ID AND NAME)
+        
+        <li *ngFor="let hero of heroes">
+
+    *** Pridanie udalosti kliknutia ***
+
+        <li *ngFor="let hero of heroes" (click)="onSelect(hero)">
+    
+    *** Pridanie vazby na element ***
+        
+        [class.selected]="hero === selectedHero"
+
+
+ -->
 
 </body>
 </html>

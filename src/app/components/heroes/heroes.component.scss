@@ -1,0 +1,40 @@
+/* HeroesComponent's private CSS styles */
+.selected {
+  background-color: #CFD8DC !important;
+  color: white;
+}
+.heroes {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 15em;
+
+    li {
+        cursor: pointer;
+        margin-bottom: 1rem;
+        border: 1px solid white;
+
+        &.selected:hover {
+            background-color: #BBD8DC !important;
+            color: white;
+        }
+
+        &:hover {
+            color: black;
+            border: 1px solid #b50909;
+            transition: background .2s ease-in-out; 
+        }
+    }
+
+    .text {
+        position: relative;
+        top: -3px;
+    }
+
+    .badge {
+       background: #b50909;
+       font-size: 20px;
+       padding: 0.5rem;
+    }
+}
+
