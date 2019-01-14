@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 
-@Component({
+@Component({  // decoration function
   selector: 'header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']

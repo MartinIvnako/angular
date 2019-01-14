@@ -1,10 +1,119 @@
-.item {
-    border: 2px solid #7800cc;
-    font-size: 26px;
-    text-align: center;
-    font-weight: 700;
-    background: #ffc600;
+// VARIABLES
+$black: #222222;
+$silver: #999999;
+
+.header {
+
+    &__logo {
+        display: grid;
+        align-content: start;
+        width: 90px;
+
+        img {
+
+        }
+    }
+
+    &__nav {
+        display: grid;
+        align-content: center;
+    }
+
+    &__ul {
+    
+    }
+
+    &__li {
+
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 13px 0;
+        
+        font-size: 15px;
+        font-weight: bold;
+        color: $black;
+        text-decoration: none;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            transform: translateX(10px);
+            transition: transform 0.2s ease-in-out;
+        }
+    }
+
+    &__footer {
+        display: grid;
+        align-content: end;
+    }
+
+    &__social {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+
+        &--link {
+            
+            i {
+                font-size: 18px;
+                color: $black;
+                transition: all 0.2s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.5);
+                    transition: transform 0.2s ease-in-out;
+                }
+            }
+
+        }
+
+        &__item {
+        
+        }
+    }
+
+    &__right {
+        font-size: 14px;
+        line-height: 1.57;
+        color: $silver;
+        margin-top: 35px;
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //  .container {
 //      grid-template-columns: 300px 1fr auto;  // vytvori tri stlpce, prvy fixny, auto budem na minime sirky kvoli fr, fr vyplni zvysok
@@ -18,11 +127,6 @@
 
 
 
-.container {
-    display: grid;
-    grid-gap: 10px; // medzery len z vnutornych stran
-    grid-template-columns: repeat(5, 150px);
-}
 
 /* 
 // definovali sme si sirku dvoch collumns
@@ -60,9 +164,57 @@
     grid-column: 1 / -1;
 
 
+// automaticky prida tolko col kolko sa zmesti podla nastavenia
+     grid-template-columns: repeat(auto-fill, 200px);
+ grid-template-columns: repeat(auto-fit, 200px);    // rozdiel len pri mensom poste col, ktore nepresahuju row
+
+
+// definujes si minimalnu sirku pre elementy, pri ktorej nastane breakpoint, netreba ti ani styly naviac
+     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  // auto-fill nezaplni celu sirku, elementy troska roztiahne ale nie uplne
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));    // auto-fit roztiahne elementy na celu sirku a nenecha volny priestor
+
+
+    // namiesto grid-template-columns a grid-template-row   
+    // grid-template: 1fr 1fr / 1fr 1fr
 
 
     */
 
 
+    // rozmiestnovanie elementov na zaklade grid-area
 
+/*     .item-content {
+        display: grid;
+        grid-template-columns: 1fr 10fr 1fr;
+        grid-template-rows: 150px 150px 100px;
+        grid-gap: 20px;
+        grid-template-areas: 
+        "sidebar-1 content sidebar-2"
+        "sidebar-1 content sidebar-2"
+        "footer footer footer";
+    
+        .sidebar-1 {
+            grid-area: sidebar-1;
+        }
+    
+        
+        .sidebar-2 {
+            grid-area: sidebar-2;
+        }
+    
+        .content {
+            grid-area: content;
+        }
+    
+        .footer {
+            grid-area: footer;
+        }
+    
+        @media (max-width: 992px) {
+            grid-template-areas: 
+            "content content content"
+            "sidebar-1 sidebar-1 sidebar-2"
+            "footer footer footer";
+        }
+    }
+ */

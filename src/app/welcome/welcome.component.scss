@@ -1,0 +1,109 @@
+// VARIABLES
+$black: #222222;
+$silver: #999999;
+$silver-light: #f7f7f7;
+$pink: #f54ea2;
+$yellow: #ffdd65;
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: end;
+    grid-gap: 50px;
+    padding: 30px 15px;
+
+    background: $silver-light;
+
+    &__item {
+        font-size: 15px;
+        font-weight: 800;
+        color: $silver;
+        letter-spacing: .2px;
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 800;
+        color:black;
+        transition: color 0.2s ease-in-out;
+        letter-spacing: .5px;
+
+        &:hover {
+            color: $pink;
+            transition: color 0.2s ease-in-out;
+        }
+    }
+}
+
+
+.banner {
+    padding-left: 35px;
+    position: relative;
+    height: calc(100vh - 79px);
+    align-items: center;
+    display: grid;
+    align-content: center;
+    justify-content: start;
+
+    &__desc {
+        font-size: 16px;
+        font-weight: 800;
+        color: $silver;
+        letter-spacing: .2px;
+        z-index: 1;
+    }
+
+    &__title {
+        font-size: 67px;
+        font-weight: 800;
+        color: $black;
+        letter-spacing: .2px;
+        padding: 20px 0 40px;
+        z-index: 1;
+    }
+
+    &__btn {
+        z-index: 1;
+        display: grid;
+        justify-self: start;
+        color: white;
+        padding: 20px 38px;
+        font-size: 14px;
+        letter-spacing: .5px;
+        font-weight: bold;
+        text-decoration: none;
+        
+        background: $pink;
+        box-shadow: -5px 6px 0px 1px $yellow;
+        transition: box-shadow 0.2s ease-in-out;
+
+        &:hover {
+            box-shadow: -3px 3px 0px 1px #ffdd65;
+            transition: box-shadow 0.2s ease-in-out;
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        width: 910px;
+        right: 0;
+        z-index: 0;
+
+        @media (min-width: 1680px) {
+            width: 1200px;
+        }
+    }
+
+}
+
+// vymazat
+.content {
+    border: 4px solid $yellow;
+
+    &__item {
+        border: 2px solid white;
+        background: black;
+        color: $pink;
+    }
+}
