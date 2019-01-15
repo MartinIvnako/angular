@@ -94,16 +94,47 @@ $yellow: #ffdd65;
             width: 1200px;
         }
     }
-
 }
 
-// vymazat
-.content {
-    border: 4px solid $yellow;
+.welcome {
+    display: grid;
+    margin-left: 255px;
 
-    &__item {
-        border: 2px solid white;
-        background: black;
-        color: $pink;
+    grid-template-columns: 250px 1fr auto;
+    grid-template-rows: 80px;
+    grid-gap: 20px;
+
+    background: #222222;
+    color: white;
+
+    &__logo {
+        justify-self: center;
+        align-self: center;
+
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        &--item {
+            padding: 10px 20px;
+        }
+    } 
+
+    &__social {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        grid-gap: 10px;
+
+
+        &--icon {
+            background: #f54ea2;
+            color: white;
+            padding: 5px 8px;
+            border-radius: 50%;
+        }
     }
 }
